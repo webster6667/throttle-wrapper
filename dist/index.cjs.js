@@ -1,0 +1,1 @@
+"use strict";module.exports=function(t,n){var r,e,i=!1;return function u(){for(var o=arguments.length,l=new Array(o),s=0;s<o;s++)l[s]=arguments[s];if(i)return r=arguments,void(e=this);t.apply(this,l),i=!0,setTimeout((function(){i=!1,r&&(u.apply(e,r),r=e=null)}),n)}};
