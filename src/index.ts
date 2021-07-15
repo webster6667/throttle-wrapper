@@ -9,8 +9,18 @@ import {Throttle, Fn} from './types'
  * @returns {boolean}
  *
  * @example
- * myFunc(1,'example')
- * // => true
+ *
+ * let result = [],
+ * fn = (number) => result.push(number),
+ * callFnWithThrottle = throttle(fn, 500)
+ *
+ * callFnWithThrottle(1)
+ * setTimeout(() => callFnWithThrottle(2.1),100)
+ * setTimeout(() => callFnWithThrottle(2.2),150)
+ * setTimeout(() => callFnWithThrottle(2.3),180)
+ * setTimeout(() => callFnWithThrottle(3),200)
+ *
+ * setTimeout(() => console.log(result),300) // => [1, 3]
  */
 const throttle:Throttle = (fn, ms) => {
     let isThrottled:boolean = false,
