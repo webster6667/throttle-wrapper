@@ -1,2 +1,1 @@
-export declare type Fn = (...args: any) => any;
-export declare type Throttle = (fn: Fn, ms: number) => Fn;
+export declare type Throttle = <T extends Function>(fn: T, ms: number) => T;

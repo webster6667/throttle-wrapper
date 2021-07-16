@@ -1,12 +1,12 @@
-import {Throttle, Fn} from './types'
+import {Throttle} from './types'
 
 /**
  * @description
  * Function ignoring call child function more often than ms
  *
- * @param {Fn} fn - function that will be called after ms
+ * @param {Function} fn - function that will be called after ms
  * @param {number} ms - time out, after which fn will call
- * @returns {Fn}
+ * @returns {Function}
  *
  * @example
  *
@@ -22,6 +22,7 @@ import {Throttle, Fn} from './types'
  *
  * setTimeout(() => console.log(result),300) // => [1, 3]
  */
+//@ts-ignore
 const throttle:Throttle = (fn, ms) => {
     let isThrottled:boolean = false,
         savedArgs:any,
