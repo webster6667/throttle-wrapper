@@ -164,7 +164,7 @@ Function ignoring call child function more often than ms
   - Description: time out, after which fn will call
 
 #### Returns
-- `any`
+- `Fn`
 
 #### Example
 ```JS

@@ -1,6 +1,6 @@
 {
   "name": "throttle-wrapper",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Function ignoring call child function more often than ms",
   "main": "dist/index.cjs.js",
   "types": "dist/index.d.ts",
@@ -20,7 +20,7 @@
     "type": "git",
     "url": "git+https://github.com/webster6667/throttle-wrapper.git"
   },
-  "keywords": [],
+  "keywords": ["throttle"],
   "author": "webster6667",
   "license": "MIT",
   "bugs": {
