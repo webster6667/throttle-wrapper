@@ -74,7 +74,7 @@ let result = [],
     setTimeout(() => callFnWithThrottle(2.3),180)
     setTimeout(() => callFnWithThrottle(3),200)
 
-    setTimeout(() => console.log(result),300)
+    setTimeout(() => console.log(result),300) //[1, 3]
 
 ```
 
@@ -95,7 +95,7 @@ let result = [],
     setTimeout(() => callFnWithThrottle(2.3),180)
     setTimeout(() => callFnWithThrottle(3),200)
 
-    setTimeout(() => console.log(result),300)
+    setTimeout(() => console.log(result),300) //[1, 3]
 
 ```
 
@@ -118,7 +118,7 @@ Connect to html file ```<script src="https://cdn.jsdelivr.net/npm/throttle-wrapp
         setTimeout(() => callFnWithThrottle(2.3),180)
         setTimeout(() => callFnWithThrottle(3),200)
 
-        setTimeout(() => console.log(result),300)
+        setTimeout(() => console.log(result),300) //[1, 3]
 
 </script>
 ```
@@ -143,7 +143,7 @@ requirejs(['throttle-wrapper'], function(throttle) {
         setTimeout(() => callFnWithThrottle(2.3),180)
         setTimeout(() => callFnWithThrottle(3),200)
 
-        setTimeout(() => console.log(result),300)
+        setTimeout(() => console.log(result),300) //[1, 3]
 
 });
 ```
