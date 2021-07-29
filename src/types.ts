@@ -1,1 +1,1 @@
-export type Throttle = <T extends Function>(fn: T, ms: number) => T
+export type Throttle = <T extends any[]>(fn: (...args:T) => void, ms: number) => (...args: T) => void

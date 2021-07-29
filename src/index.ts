@@ -22,7 +22,6 @@ import {Throttle} from './types'
  *
  * setTimeout(() => console.log(result),300) // => [1, 3]
  */
-//@ts-ignore
 const throttle:Throttle = (fn, ms) => {
     let isThrottled:boolean = false,
         savedArgs:any,

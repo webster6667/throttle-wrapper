@@ -16,6 +16,7 @@
   - [Install](#install)
   - [Initialization](#initialization)
 - [Methods](#methods)
+  - [throttle](#throttle)
 
 ## Quick start
 
@@ -148,6 +149,38 @@ requirejs(['throttle-wrapper'], function(throttle) {
 ```
 
 ## Methods
+
+### throttle
+
+Function ignoring call child function more often than ms
+
+
+#### Params
+- `fn`
+  - Type: `function`
+  - Description: function that will be called after ms
+- `ms`
+  - Type: `number`
+  - Description: time out, after which fn will call
+
+#### Returns
+- `function`
+
+#### Example
+```JS
+let result = [],
+fn = (number) => result.push(number),
+callFnWithThrottle = throttle(fn, 500)
+
+callFnWithThrottle(1)
+setTimeout(() => callFnWithThrottle(2.1),100)
+setTimeout(() => callFnWithThrottle(2.2),150)
+setTimeout(() => callFnWithThrottle(2.3),180)
+setTimeout(() => callFnWithThrottle(3),200)
+
+setTimeout(() => console.log(result),300) // => [1, 3]
+```
+
 
 
 ## Author
